@@ -1,0 +1,78 @@
+@use "../../styles/colors.scss" as colors;
+
+a {
+	text-decoration: none;
+}
+
+.card {
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+		rgba(0, 0, 0, 0.22) 0px 15px 12px;
+	border-radius: 10px;
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	&__title {
+		text-align: center;
+		color: white;
+		font-size: 2rem;
+	}
+	&__description {
+		text-align: center;
+	}
+	&__buttons {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		&__button {
+			height: 3rem;
+			width: 3rem;
+			background-color: white;
+			border-radius: 10px;
+			padding: 0.5rem;
+			margin: 1rem;
+		}
+	}
+
+	&__media {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		&__img {
+			height: 10rem;
+			border-radius: 10px;
+		}
+		&__icons {
+			display: flex;
+			width: 80%;
+			flex-direction: row;
+			justify-content: center;
+			margin-top: 1rem;
+			background-color: rgba(88, 109, 112, 0.658);
+			border-radius: 10px;
+			img {
+				height: 80%;
+				margin: 5%;
+				width: 15%;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 900px) {
+	.card {
+		background-color: colors.$bg-gallery1;
+		width: 30%;
+		flex-direction: row;
+		justify-content: space-around;
+		padding: 5rem;
+		margin-bottom: 15rem;
+		&__img {
+			height: 15rem;
+			width: 8rem;
+		}
+	}
+}
