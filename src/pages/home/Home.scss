@@ -1,65 +1,82 @@
 @use "../../styles/colors.scss" as colors;
 @use "../../styles/mixins.scss" as mixins;
+@use "../../styles/utils.scss" as utils;
 
-.logo {
-	height: 50vh;
-	width: 45vh;
-}
-.info {
-	flex-wrap: wrap;
-	max-height: 37vh;
-	width: 40%;
-	background-color: #f77f00;
-	align-self: center;
-	margin-bottom: 50px;
-	color: black;
-	border-radius: 20px;
-	padding: 1rem;
-	box-shadow: 10px 10px #001b29;
-	text-align: center;
-}
-.nombre {
-	margin-top: 4%;
-	text-align: center;
-	@include mixins.page-title;
-}
-.info p {
-	font-size: 3vw;
-}
-.screen1 {
-	background-color: colors.$bg-home;
-	min-height: 100vh;
-	max-width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
+$logo-width: 26.313rem;
+$logo-height: 32.688rem;
+
+$logo-width--small: 7rem;
+$logo-height--small: 7rem;
+
+$logo--mid: 8rem;
+.home {
+  background-color: colors.$bg-home;
+
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: auto;
+
+  &__title {
+    margin-top: 4%;
+    text-align: center;
+    @include mixins.page-title;
+  }
+  &__container {
+    flex-wrap: wrap;
+    max-height: 37vh;
+    width: 40%;
+    background-color: colors.$home-boc-orange;
+    align-self: center;
+    color: black;
+    border-radius: utils.$default-border;
+    padding: 1rem;
+    box-shadow: 10px 10px colors.$home-box-shadow;
+    text-align: center;
+    &__logo {
+      width: $logo-width;
+      height: $logo-height;
+    }
+    &__description {
+      font-size: 1.25rem;
+    }
+  }
 }
 
 /* mobile */
-@media (min-width: 767px) {
-	.info p {
-		font-size: 1vw;
-	}
+
+@media screen and (max-width: 767px) {
+  /* Styles for mobile phones */
+
+  .home {
+    &__container {
+      &__logo {
+        width: $logo-width--small;
+        height: $logo-height--small;
+      }
+      &__description {
+        font-size: 0.75rem;
+      }
+    }
+  }
 }
-@media (max-width: 1025px) {
-	.screen1 {
-		justify-content: center;
-	}
-	.nombre {
-		margin-left: 0;
-	}
-}
-@media (max-width: 1023px) and (max-height: 910px) {
-	.logo {
-		height: 110px;
-		width: 100px;
-	}
-	.info {
-		margin-top: 0;
-		height: 40%;
-	}
-	.nombre {
-		margin-left: 0;
-	}
+
+@media (max-width: 1024px) and (max-height: 600px) {
+  .home {
+    &__container {
+      &__logo {
+        width: $logo--mid;
+        height: $logo--mid;
+      }
+      &__title {
+        font-size: 2rem;
+      }
+      &__description {
+        font-size: 1rem;
+      }
+    }
+  }
 }
