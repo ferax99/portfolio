@@ -1,0 +1,12 @@
+@mixin animation-grow-width {
+  animation: grow 1.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes grow {
+  from {
+    width: 0;
+  }
+  to {
+    width: 40%;
+  }
+}

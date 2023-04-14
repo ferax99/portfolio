@@ -15,19 +15,17 @@ const catchyPhrases = [
 ];
 
 const Home = () => {
-  const [slogan, setSlogan] = useState(`'I like programming'`);
+  const [slogan, setSlogan] = useState(`${catchyPhrases[0]}`);
 
   useEffect(() => {
-    let index = 0;
+    let index = catchyPhrases.length;
+
     const interval = setInterval(() => {
-      index++;
-      setSlogan(
-        catchyPhrases[Math.floor(Math.random() * catchyPhrases.length)]
-      );
-      if (index > 8) {
-        clearInterval(interval);
-      }
-    }, 2500);
+      index === 1 ? clearInterval(interval) : index--;
+      var i = Math.floor(Math.random() * catchyPhrases.length);
+      setSlogan(catchyPhrases[i]); // use list item
+      catchyPhrases.splice(i, 1); //delete item from list
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
@@ -37,7 +35,7 @@ const Home = () => {
     <section>
       <div className={`${block}`}>
         <h1 className={`${block}__title`}>Fernando Binda</h1>
-        <div className={`${block}__container`}>
+        <div className={`${block}__container animate`}>
           <img
             className={`${block}__container__logo`}
             src={logo}

@@ -1,6 +1,7 @@
 @use "../../styles/colors.scss" as colors;
 @use "../../styles/mixins.scss" as mixins;
 @use "../../styles/utils.scss" as utils;
+@use "../../styles/animations.scss" as animations;
 
 $logo-width: 26.313rem;
 $logo-height: 32.688rem;
@@ -42,10 +43,14 @@ $logo--mid: 8rem;
     }
     &__description {
       font-size: 1.25rem;
+      letter-spacing: 0.15em;
     }
   }
 }
 
+.animate {
+  @include animations.animation-grow-width;
+}
 /* mobile */
 
 @media screen and (max-width: 767px) {
