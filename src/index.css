@@ -1,16 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Aquí puedes agregar tu CSS personalizado si lo deseas.
+   Por ejemplo, podrías tener estilos globales para el body */
 body {
   margin: 0;
-  font-family: 'Times New Roman', Times, serif;
-
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
-}
-*{
-  scroll-behavior: auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Opcional: Para asegurar un desplazamiento suave al hacer clic en los enlaces del menú */
+html {
+  scroll-behavior: smooth;
 }
