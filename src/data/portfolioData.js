@@ -132,11 +132,7 @@ export const experiences = {
   achievements: [
     {
       id: 1,
-      text: 'Winner of the "Best Innovation Project" award at the 2021 university hackathon.',
-    },
-    {
-      id: 2,
-      text: 'Open source contribution to the "DataFlow.js" data processing framework.',
+      text: 'Winner of the "Best Project" award at the 2021 university carreer project',
     }
   ]
 };
