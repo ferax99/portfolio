@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star, Code, Wrench } from 'lucide-react'; // Iconos
+import { Star, Code, Wrench } from 'lucide-react';
 
 const FreelanceProjectCard = ({ project }) => {
   const getIconForTech = (tech) => {
@@ -11,14 +11,14 @@ const FreelanceProjectCard = ({ project }) => {
       case 'javascript':
       case 'react':
       case 'tailwind css':
-        return <Code className="inline-block h-4 w-4 mr-1 text-gray-400" />; // Podrías usar un ícono específico para web
+        return <Code className="inline-block h-4 w-4 mr-1 text-gray-400" />;
       case 'jira':
       case 'testrail':
       case 'manual testing':
       case 'automated testing':
         return <Wrench className="inline-block h-4 w-4 mr-1 text-gray-400" />;
       default:
-        return <Code className="inline-block h-4 w-4 mr-1 text-gray-400" />; // Icono genérico
+        return <Code className="inline-block h-4 w-4 mr-1 text-gray-400" />;
     }
   };
 
@@ -37,7 +37,7 @@ const FreelanceProjectCard = ({ project }) => {
         <h4 className="text-2xl font-semibold text-[#FF8800] mb-3">{project.title}</h4>
         <p className="text-gray-300 mb-4 flex-grow">{project.description}</p>
         <div className="mb-3">
-          <p className="font-medium text-gray-200">Tecnologías:</p>
+          <p className="font-medium text-gray-200">Technologies:</p>
           <ul className="list-disc list-inside text-sm text-gray-400 ml-4">
             {project.technologies.map((tech, index) => (
               <li key={index}>{getIconForTech(tech)}{tech}</li>

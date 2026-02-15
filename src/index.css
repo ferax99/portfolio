@@ -2,8 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Aquí puedes agregar tu CSS personalizado si lo deseas.
-   Por ejemplo, podrías tener estilos globales para el body */
+/* Custom global styles */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -13,7 +12,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Opcional: Para asegurar un desplazamiento suave al hacer clic en los enlaces del menú */
+/* Smooth scroll when clicking menu links */
 html {
   scroll-behavior: smooth;
 }

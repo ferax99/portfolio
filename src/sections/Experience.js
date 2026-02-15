@@ -1,8 +1,8 @@
 import React from 'react';
-import { Briefcase, School, Award, Code, Cloud, Database, Wrench, GitFork, Bot } from 'lucide-react'; // Iconos
-import { experiences } from '../data/portfolioData'; // Importa los datos de experiencias
+import { Briefcase, School, Award, Code, Cloud, Database, Wrench, GitFork, Bot } from 'lucide-react';
+import { experiences } from '../data/portfolioData';
 
-// Helper para mapear strings de iconos a componentes Lucide React
+// Map icon name strings to Lucide React components
 const getLucideIcon = (iconName) => {
   const icons = {
     Code: Code,
@@ -35,7 +35,7 @@ const Experience = () => {
               {experiences.professional.map((job) => (
                 <li key={job.id} className="flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-4">
                   <div className="flex-shrink-0">
-                    <div className="h-3 w-3 bg-[#FF8800] rounded-full mt-2 sm:mt-0"></div> {/* Bullet point */}
+                    <div className="h-3 w-3 bg-[#FF8800] rounded-full mt-2 sm:mt-0"></div>
                   </div>
                   <div className="flex-grow">
                     <h4 className="text-xl font-bold text-gray-200">{job.role}</h4>

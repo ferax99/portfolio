@@ -1,6 +1,6 @@
 import React from 'react';
-import ProjectCard from './ProjectCard'; // Importa el componente de tarjeta de proyecto
-import { projects } from '../data/portfolioData'; // Importa los datos de proyectos
+import ProjectCard from './ProjectCard';
+import { projects } from '../data/portfolioData';
 
 const Projects = () => {
   return (

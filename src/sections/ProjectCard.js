@@ -1,5 +1,5 @@
 import React from 'react';
-import { Briefcase, Package, Award, Link as LinkIcon, Github } from 'lucide-react'; // Iconos
+import { Briefcase, Package, Award, Link as LinkIcon, Github } from 'lucide-react';
 
 const ProjectCard = ({ project }) => {
   return (

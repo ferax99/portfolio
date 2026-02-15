@@ -1,4 +1,4 @@
-// Datos para la sección de Proyectos
+// Data for the Projects section
 export const projects = [
   {
     id: 1,
@@ -27,7 +27,7 @@ export const projects = [
   }
 ];
 
-// Datos para la sección de Proyectos Freelance
+// Data for the Freelance Projects section
 export const freelanceProjects = [
   {
     id: 1,
@@ -61,7 +61,7 @@ export const freelanceProjects = [
   },
 ];
 
-// Datos para la sección de Experiencia (Profesional, Educación, Certificaciones, Logros)
+// Data for Experience section (Professional, Education, Certifications, Achievements)
 export const experiences = {
   professional: [
     {
@@ -132,7 +132,7 @@ export const experiences = {
   achievements: [
     {
       id: 1,
-      text: 'Winner of the "Best Project" award at the 2021 university carreer project',
+      text: 'Winner of the "Best Project" award at the 2021 university career project',
     }
   ]
 };
